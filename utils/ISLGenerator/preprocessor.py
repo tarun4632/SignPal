@@ -6,8 +6,6 @@ from nltk.corpus import stopwords
 
 class Preprocessor:
     def __init__(self):
-        nltk.download('wordnet', quiet=True)
-        nltk.download('stopwords', quiet=True)
         self.lemmatizer = WordNetLemmatizer()
         self.stop_words = set(stopwords.words('english'))
         
