@@ -1,4 +1,4 @@
-from voice_to_text import VoiceToText
+from utils.voice_to_text_project.voice_to_text import VoiceToText
 
 def main():
     vtt = VoiceToText()

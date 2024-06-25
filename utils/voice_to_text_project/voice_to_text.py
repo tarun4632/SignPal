@@ -3,7 +3,7 @@ import speech_recognition as sr
 class VoiceToText:
     def __init__(self, pause_threshold=3.0):
         self.recognizer = sr.Recognizer()
-        self.recognizer.pause_threshold = pause_threshold  # Adjust this value to change sensitivity
+        self.recognizer.pause_threshold = pause_threshold 
 
     def record_audio(self):
         with sr.Microphone() as source:
