@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# IDE-specific files (optional, but often helpful)
+.vscode/
+.idea/
+
+# Other common files to ignore
+*.log
+.DS_Store
