@@ -14,5 +14,5 @@ SignPal is an innovative tool designed to bridge the communication gap for the d
 ## How it works
 
 <p align="center">
-  <img src="flowchart.jpeg" alt="SignPalWorkflow" />
+  <img src="flowchart.jpg" alt="SignPalWorkflow" />
 </p>
