@@ -2,7 +2,7 @@ import re
 from nltk import ParentedTree, Tree
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-from .utils import clean, sp
+from .utils import sp
 
 class ISLConverter:
     def __init__(self):
