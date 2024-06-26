@@ -1,8 +1,14 @@
 import re
+import nltk
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
 from nltk import ParentedTree, Tree
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-from .utils import sp
+from utils import sp
+
 
 class ISLConverter:
     def __init__(self):
@@ -14,7 +20,7 @@ class ISLConverter:
         parenttree = ParentedTree.convert(parsetree)
         for sub in parenttree.subtrees():
             dict[sub.treeposition()] = 0
-        
+
         isltree = Tree('ROOT', [])
         i = 0
         for sub in parenttree.subtrees():
@@ -24,13 +30,15 @@ class ISLConverter:
                 i += 1
             if sub.label() == "VP" or sub.label() == "PRP":
                 for sub2 in sub.subtrees():
-                    if (sub2.label() == "NP" or sub2.label() == 'PRP') and dict[sub2.treeposition()] == 0 and dict[sub2.parent().treeposition()] == 0:
+                    if (sub2.label() == "NP" or sub2.label() == 'PRP') and dict[sub2.treeposition()] == 0 and dict[
+                        sub2.parent().treeposition()] == 0:
                         dict[sub2.treeposition()] = 1
                         isltree.insert(i, sub2)
                         i += 1
         for sub in parenttree.subtrees():
             for sub2 in sub.subtrees():
-                if len(sub2.leaves()) == 1 and dict[sub2.treeposition()] == 0 and dict[sub2.parent().treeposition()] == 0:
+                if len(sub2.leaves()) == 1 and dict[sub2.treeposition()] == 0 and dict[
+                    sub2.parent().treeposition()] == 0:
                     dict[sub2.treeposition()] = 1
                     isltree.insert(i, sub2)
                     i += 1
