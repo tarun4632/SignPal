@@ -1,1 +1,1 @@
-# WisperSign
+# SignPal
