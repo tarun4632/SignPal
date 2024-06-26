@@ -11,7 +11,7 @@ SignPal is an innovative tool designed to bridge the communication gap for the d
 - **Accuracy:** More accurate and consistent than competitors in the market.
 - **Real-Time Translation**: With advanced AI and machine learning algorithms, SIGNPAL will deliver instantaneous translations, ensuring that users do not miss out on important conversations or information.
 
-##!How it works
+## How it works
 
 <p align="center">
   <img src="flowchart.jpg" alt="SignPalWorkflow" />
