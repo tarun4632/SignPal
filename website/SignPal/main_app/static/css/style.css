@@ -82,7 +82,7 @@ header {
     margin-bottom: 30px;
 }
 
-.cta-buttons button {
+/* .cta-buttons button {
     padding: 10px 20px;
     margin-right: 10px;
     border: none;
@@ -99,7 +99,7 @@ header {
 .login-btn {
     background-color: #333;
     color: #fff;
-}
+} */
 
 .hero-image img {
     margin-top: -100px;
@@ -131,6 +131,33 @@ header {
     font-size: 16px;
 }
 
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1000;
+}
+
+.signup-btn {
+    background-color: #00c2cb;
+    color: #fff;
+    z-index: 1000;
+
+}
+
+.login-btn {
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+
+}
 
 .video-container {
     width: 100%;
