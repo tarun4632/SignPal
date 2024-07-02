@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
             videoTimer = setTimeout(() => {
                 videoPlaceholder.style.display = 'none';
                 video.style.display = 'block';
-                video.muted = true; // Ensure the video is not muted
+                video.muted = false; // Ensure the video is not muted
                 video.play().then(() => {
                     statusMessage.textContent = 'Playing sign language video...';
                 }).catch(e => {
                     console.error('Error playing video:', e);
                     statusMessage.textContent = 'Error playing video. Please try again.';
                 });
-            }, 2000); // 10 seconds
+            }, 10000); // 10 seconds
         };
 
         recognition.onresult = function(event) {
